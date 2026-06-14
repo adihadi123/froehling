@@ -100,6 +100,8 @@ esphome/en/froehling-pe1-en.yaml
 
 Beide Varianten verwenden als Geräte-/Entity-Basis `froehling PE1`, damit Home Assistant Entity-IDs mit `froehling_pe1_...` erzeugt.
 
+Detailanleitung zum Bespielen/Flashen: `docs/de/esp32-bespielen.md`
+
 ## 6. ESP32 flashen
 
 Empfohlener Ablauf:

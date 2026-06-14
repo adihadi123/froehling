@@ -97,6 +97,14 @@ English:
 
 
 
+## ESP32 bespielen / flashen
+
+Deutsch:
+
+- `docs/de/esp32-bespielen.md`
+
+Diese Anleitung beschreibt den konkreten Flash-Weg über Home Assistant / ESPHome Add-on, ESPHome Web und optional ESPHome CLI.
+
 ## ESP32-Datenweg / ESP32 data flow
 
 Deutsch:

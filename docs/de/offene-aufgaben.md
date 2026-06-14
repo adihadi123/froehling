@@ -53,7 +53,9 @@ Hinweis:
 - Passwörter nicht ins GitHub-Repo schreiben.
 
 
-Detailanleitung: `docs/de/esp32-esphome-datenfluss.md`
+Detailanleitung Datenfluss: `docs/de/esp32-esphome-datenfluss.md`
+
+Detailanleitung ESP32 bespielen: `docs/de/esp32-bespielen.md`
 
 ## 4. ESPHome flashen
 
