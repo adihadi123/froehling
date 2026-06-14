@@ -3,28 +3,28 @@
   host: 192.168.178.xxx # IP des RS232/RS485-zu-Ethernet-Gateways anpassen
   port: 502
   sensors:
-    - name: Fröling PE1 Anlagenzustand Enum
+    - name: froehling PE1 Anlagenzustand Enum
       unique_id: froehling_pe1_anlagenzustand_enum
       slave: 2
       input_type: input
       address: 4000
       scan_interval: 30
       device_class: enum
-    - name: Fröling PE1 Kesselzustand Enum
+    - name: froehling PE1 Kesselzustand Enum
       unique_id: froehling_pe1_kesselzustand_enum
       slave: 2
       input_type: input
       address: 4001
       scan_interval: 30
       device_class: enum
-    - name: Fröling PE1 HK1 Betriebsart Enum
+    - name: froehling PE1 HK1 Betriebsart Enum
       unique_id: froehling_pe1_hk1_betriebsart_enum
       slave: 2
       input_type: holding
       address: 8046
       scan_interval: 30
       device_class: enum
-    - name: Fröling PE1 Kesseltemperatur
+    - name: froehling PE1 Kesseltemperatur
       unique_id: froehling_pe1_kesseltemperatur
       slave: 2
       input_type: input
@@ -35,7 +35,7 @@
       device_class: temperature
       state_class: measurement
       unit_of_measurement: °C
-    - name: Fröling PE1 Rücklauftemperatur
+    - name: froehling PE1 Rücklauftemperatur
       unique_id: froehling_pe1_ruecklauftemperatur
       slave: 2
       input_type: input
@@ -46,7 +46,7 @@
       device_class: temperature
       state_class: measurement
       unit_of_measurement: °C
-    - name: Fröling PE1 Außentemperatur
+    - name: froehling PE1 Außentemperatur
       unique_id: froehling_pe1_aussentemperatur
       slave: 2
       input_type: input
@@ -57,7 +57,7 @@
       device_class: temperature
       state_class: measurement
       unit_of_measurement: °C
-    - name: Fröling PE1 HK1 Vorlauf Ist
+    - name: froehling PE1 HK1 Vorlauf Ist
       unique_id: froehling_pe1_hk1_vorlauf_ist
       slave: 2
       input_type: input
@@ -68,7 +68,7 @@
       device_class: temperature
       state_class: measurement
       unit_of_measurement: °C
-    - name: Fröling PE1 HK1 Vorlauf Soll
+    - name: froehling PE1 HK1 Vorlauf Soll
       unique_id: froehling_pe1_hk1_vorlauf_soll
       slave: 2
       input_type: input
@@ -79,7 +79,7 @@
       device_class: temperature
       state_class: measurement
       unit_of_measurement: °C
-    - name: Fröling PE1 Puffer Temperatur oben
+    - name: froehling PE1 Puffer Temperatur oben
       unique_id: froehling_pe1_puffer_temperatur_oben
       slave: 2
       input_type: input
@@ -90,7 +90,7 @@
       device_class: temperature
       state_class: measurement
       unit_of_measurement: °C
-    - name: Fröling PE1 Puffer Temperatur Mitte
+    - name: froehling PE1 Puffer Temperatur Mitte
       unique_id: froehling_pe1_puffer_temperatur_mitte
       slave: 2
       input_type: input
@@ -101,7 +101,7 @@
       device_class: temperature
       state_class: measurement
       unit_of_measurement: °C
-    - name: Fröling PE1 Puffer Temperatur unten
+    - name: froehling PE1 Puffer Temperatur unten
       unique_id: froehling_pe1_puffer_temperatur_unten
       slave: 2
       input_type: input
@@ -112,7 +112,7 @@
       device_class: temperature
       state_class: measurement
       unit_of_measurement: °C
-    - name: Fröling PE1 Puffer Ladezustand
+    - name: froehling PE1 Puffer Ladezustand
       unique_id: froehling_pe1_puffer_ladezustand
       slave: 2
       input_type: input
@@ -121,7 +121,7 @@
       scale: 1
       precision: 0
       unit_of_measurement: "%"
-    - name: Fröling PE1 Pelletfüllstand
+    - name: froehling PE1 Pelletfüllstand
       unique_id: froehling_pe1_pelletfuellstand
       slave: 2
       input_type: input
@@ -130,7 +130,7 @@
       scale: 0.005
       precision: 1
       unit_of_measurement: "%"
-    - name: Fröling PE1 Pelletverbrauch kg
+    - name: froehling PE1 Pelletverbrauch kg
       unique_id: froehling_pe1_pelletverbrauch_kg
       slave: 2
       input_type: input

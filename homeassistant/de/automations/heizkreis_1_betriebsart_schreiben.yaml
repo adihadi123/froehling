@@ -1,7 +1,7 @@
 # Beispiel: HK1 Betriebsart über input_select in Modbus Holding Register 8046 schreiben.
 # Vor Benutzung Hub-Name und Entity-IDs prüfen.
 
-alias: Fröling PE1 HK1 Betriebsart schreiben
+alias: froehling PE1 HK1 Betriebsart schreiben
 mode: single
 trigger:
   - platform: state

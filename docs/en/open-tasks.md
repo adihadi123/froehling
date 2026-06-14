@@ -1,6 +1,6 @@
 # Open tasks until the Home Assistant integration is complete
 
-This list describes what still needs to be done to turn this repository into a working Fröling PE1 integration for Home Assistant.
+This list describes what still needs to be done to turn this repository into a working froehling PE1 integration for Home Assistant.
 
 ## 1. Build the hardware
 
@@ -46,6 +46,9 @@ froehling_api_key: "YOUR_ESPHOME_API_KEY"
 froehling_ota_password: "YOUR_OTA_PASSWORD"
 froehling_fallback_password: "YOUR_FALLBACK_AP_PASSWORD"
 ```
+
+
+Detailed guide: `docs/en/esp32-esphome-data-flow.md`
 
 ## 4. Flash ESPHome
 
@@ -129,7 +132,7 @@ Option A: manual YAML dashboard
 
 1. Open Home Assistant.
 2. Go to Settings → Dashboards.
-3. Create a new dashboard, e.g. `Fröling PE1`.
+3. Create a new dashboard, e.g. `froehling PE1`.
 4. Use YAML mode or the raw configuration editor.
 5. Paste the content from `homeassistant/en/dashboard.yaml`.
 6. Check and adjust entity IDs.

@@ -52,6 +52,9 @@ Hinweis:
 - API-Key kann ESPHome generieren.
 - Passwörter nicht ins GitHub-Repo schreiben.
 
+
+Detailanleitung: `docs/de/esp32-esphome-datenfluss.md`
+
 ## 4. ESPHome flashen
 
 Ziel: Der ESP32 wird mit der passenden Konfiguration geflasht.
@@ -134,7 +137,7 @@ Variante A: Manuelles YAML-Dashboard
 
 1. Home Assistant öffnen.
 2. Einstellungen → Dashboards.
-3. Neues Dashboard anlegen, z.B. `Fröling PE1`.
+3. Neues Dashboard anlegen, z.B. `froehling PE1`.
 4. YAML-Modus oder Raw-Konfigurationseditor nutzen.
 5. Inhalt aus `homeassistant/de/dashboard.yaml` einfügen.
 6. Entity-IDs prüfen und anpassen.

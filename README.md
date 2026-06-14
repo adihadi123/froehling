@@ -1,6 +1,6 @@
 # Fröling PE1 / Lambdatronic 3200 für Home Assistant
 
-Dieses Repository ist Roys bereinigte Projektbasis für eine Fröling PE1 mit Lambdatronic 3200.
+Dieses Repository ist Roys bereinigte Projektbasis für eine Fröling PE1 mit Lambdatronic 3200. Die technische Geräte-/Entity-Basis heißt bewusst `froehling PE1`, damit keine Umlaute in Home-Assistant-Entity-IDs landen.
 
 Ziel:
 
@@ -57,6 +57,7 @@ Aktueller Zuschnitt:
 
 - Fröling PE1
 - Lambdatronic 3200
+- Geräte-/Entity-Basis: `froehling PE1`
 - Heizkreis 1
 - Pelletspeicher / Pelletfüllstand
 - am Ofen angeschlossener Pufferspeicher
@@ -93,6 +94,20 @@ Deutsch:
 English:
 
 - `docs/en/open-tasks.md`
+
+
+
+## ESP32-Datenweg / ESP32 data flow
+
+Deutsch:
+
+- `docs/de/esp32-esphome-datenfluss.md`
+
+English:
+
+- `docs/en/esp32-esphome-data-flow.md`
+
+Naming-Konvention: Geräte- und Entity-Basis ist bewusst `froehling PE1`, damit Home Assistant Entity-IDs mit `froehling_pe1_...` erzeugt und keine Umlaute im Prefix vorkommen.
 
 ## Home Assistant Dashboard
 

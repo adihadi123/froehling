@@ -1,7 +1,7 @@
 sensor:
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "${friendly_name} Pelletfüllstand"
+    name: "${friendly_name} Pelletfuellstand"
     id: ${device_id}_pelletfuellstand
     register_type: read
     address: 21

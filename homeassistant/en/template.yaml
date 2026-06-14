@@ -1,5 +1,5 @@
 - sensor:
-    - name: "Froeling PE1 System Status"
+    - name: "froehling PE1 System Status"
       unique_id: froehling_pe1_system_status
       state: >
         {% set mapper = {
@@ -7,9 +7,9 @@
           '3': 'Firewood operation', '4': 'Cleaning', '5': 'Boiler off',
           '6': 'Extra heating', '7': 'Chimney sweep', '8': 'Cleaning'
         } %}
-        {{ mapper.get(states('sensor.froling_pe1_system_status_enum'), 'Unknown') }}
+        {{ mapper.get(states('sensor.froehling_pe1_system_status_enum'), 'Unknown') }}
       icon: mdi:home-thermometer
-    - name: "Froeling PE1 Furnace Status"
+    - name: "froehling PE1 Furnace Status"
       unique_id: froehling_pe1_furnace_status
       state: >
         {% set mapper = {
@@ -18,11 +18,11 @@
           '7': 'Preparation', '8': 'Pre-heating', '9': 'Ignition',
           '15': 'Cleaning', '19': 'Standby'
         } %}
-        {{ mapper.get(states('sensor.froling_pe1_furnace_status_enum'), 'Code ' ~ states('sensor.froling_pe1_furnace_status_enum')) }}
+        {{ mapper.get(states('sensor.froehling_pe1_furnace_status_enum'), 'Code ' ~ states('sensor.froehling_pe1_furnace_status_enum')) }}
       icon: mdi:fire
-    - name: "Froeling PE1 HC1 Heating Mode"
+    - name: "froehling PE1 HC1 Heating Mode"
       unique_id: froehling_pe1_hc1_heating_mode
       state: >
         {% set mapper = {'0':'Off','1':'Automatic','2':'Extra heating','3':'Setback','4':'Continuous setback','5':'Party mode'} %}
-        {{ mapper.get(states('sensor.froling_pe1_hc1_heating_mode_enum'), 'Unknown') }}
+        {{ mapper.get(states('sensor.froehling_pe1_hc1_heating_mode_enum'), 'Unknown') }}
       icon: mdi:radiator

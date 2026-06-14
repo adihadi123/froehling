@@ -1,4 +1,4 @@
-title: Fröling PE1
+title: froehling PE1
 views:
   - title: Übersicht
     path: uebersicht
@@ -6,7 +6,7 @@ views:
     cards:
       - type: markdown
         content: |
-          # Fröling PE1
+          # froehling PE1
           Übersicht für Kessel, Heizkreis 1, Pufferspeicher und Pelletspeicher.
 
           Hinweis: Wenn eine Karte eine fehlende Entity meldet, muss die Entity-ID an deine Home-Assistant-Installation angepasst werden.
@@ -14,17 +14,17 @@ views:
         title: Status
         show_header_toggle: false
         entities:
-          - entity: sensor.froling_pe1_anlagenzustand
+          - entity: sensor.froehling_pe1_anlagenzustand
             name: Anlagenzustand
-          - entity: sensor.froling_pe1_kesselzustand
+          - entity: sensor.froehling_pe1_kesselzustand
             name: Kesselzustand
-          - entity: sensor.froling_pe1_kesseltemperatur
+          - entity: sensor.froehling_pe1_kesseltemperatur
             name: Kesseltemperatur
-          - entity: sensor.froling_pe1_aussentemperatur
+          - entity: sensor.froehling_pe1_aussentemperatur
             name: Außentemperatur
       - type: gauge
         name: Puffer Ladezustand
-        entity: sensor.froling_pe1_puffer_ladezustand
+        entity: sensor.froehling_pe1_puffer_ladezustand
         min: 0
         max: 100
         severity:
@@ -33,7 +33,7 @@ views:
           red: 0
       - type: gauge
         name: Pelletfüllstand
-        entity: sensor.froling_pe1_pelletfullstand
+        entity: sensor.froehling_pe1_pelletfuellstand
         min: 0
         max: 100
         severity:
@@ -45,15 +45,15 @@ views:
         hours_to_show: 24
         refresh_interval: 60
         entities:
-          - entity: sensor.froling_pe1_kesseltemperatur
+          - entity: sensor.froehling_pe1_kesseltemperatur
             name: Kessel
-          - entity: sensor.froling_pe1_aussentemperatur
+          - entity: sensor.froehling_pe1_aussentemperatur
             name: Außen
-          - entity: sensor.froling_pe1_hk1_vorlauf_ist
+          - entity: sensor.froehling_pe1_hk1_vorlauf_ist
             name: HK1 Vorlauf Ist
-          - entity: sensor.froling_pe1_puffer_temperatur_oben
+          - entity: sensor.froehling_pe1_puffer_temperatur_oben
             name: Puffer oben
-          - entity: sensor.froling_pe1_puffer_temperatur_unten
+          - entity: sensor.froehling_pe1_puffer_temperatur_unten
             name: Puffer unten
 
   - title: Kessel
@@ -63,19 +63,19 @@ views:
       - type: entities
         title: Kesselwerte
         entities:
-          - sensor.froling_pe1_anlagenzustand
-          - sensor.froling_pe1_kesselzustand
-          - sensor.froling_pe1_kesseltemperatur
-          - sensor.froling_pe1_rucklauftemperatur
-          - sensor.froling_pe1_betriebsstunden
-          - sensor.froling_pe1_stunden_seit_wartung
-          - sensor.froling_pe1_stunden_bis_asche_entleeren
+          - sensor.froehling_pe1_anlagenzustand
+          - sensor.froehling_pe1_kesselzustand
+          - sensor.froehling_pe1_kesseltemperatur
+          - sensor.froehling_pe1_ruecklauftemperatur
+          - sensor.froehling_pe1_betriebsstunden
+          - sensor.froehling_pe1_stunden_seit_wartung
+          - sensor.froehling_pe1_stunden_bis_asche_entleeren
       - type: history-graph
         title: Kesseltemperatur / Rücklauf
         hours_to_show: 24
         entities:
-          - sensor.froling_pe1_kesseltemperatur
-          - sensor.froling_pe1_rucklauftemperatur
+          - sensor.froehling_pe1_kesseltemperatur
+          - sensor.froehling_pe1_ruecklauftemperatur
 
   - title: Heizkreis 1
     path: heizkreis-1
@@ -84,18 +84,18 @@ views:
       - type: entities
         title: Heizkreis 1
         entities:
-          - sensor.froling_pe1_hk1_vorlauf_ist
-          - sensor.froling_pe1_hk1_vorlauf_soll
-          - binary_sensor.froling_pe1_hk1_pumpe
-          - select.froling_pe1_hk1_betriebsart
-          - number.froling_pe1_hk1_vorlauf_bei_minus_10degc_aussentemperatur
-          - number.froling_pe1_hk1_vorlauf_bei_plus_10degc_aussentemperatur
+          - sensor.froehling_pe1_hk1_vorlauf_ist
+          - sensor.froehling_pe1_hk1_vorlauf_soll
+          - binary_sensor.froehling_pe1_hk1_pumpe
+          - select.froehling_pe1_hk1_betriebsart
+          - number.froehling_pe1_hk1_vorlauf_bei_minus_10c_aussentemperatur
+          - number.froehling_pe1_hk1_vorlauf_bei_plus_10c_aussentemperatur
       - type: history-graph
         title: HK1 Vorlauf
         hours_to_show: 24
         entities:
-          - sensor.froling_pe1_hk1_vorlauf_ist
-          - sensor.froling_pe1_hk1_vorlauf_soll
+          - sensor.froehling_pe1_hk1_vorlauf_ist
+          - sensor.froehling_pe1_hk1_vorlauf_soll
 
   - title: Puffer
     path: puffer
@@ -104,18 +104,18 @@ views:
       - type: entities
         title: Pufferspeicher
         entities:
-          - sensor.froling_pe1_puffer_temperatur_oben
-          - sensor.froling_pe1_puffer_temperatur_mitte
-          - sensor.froling_pe1_puffer_temperatur_unten
-          - sensor.froling_pe1_puffer_ladezustand
-          - sensor.froling_pe1_pufferpumpe_ansteuerung
+          - sensor.froehling_pe1_puffer_temperatur_oben
+          - sensor.froehling_pe1_puffer_temperatur_mitte
+          - sensor.froehling_pe1_puffer_temperatur_unten
+          - sensor.froehling_pe1_puffer_ladezustand
+          - sensor.froehling_pe1_pufferpumpe_ansteuerung
       - type: history-graph
         title: Puffertemperaturen
         hours_to_show: 24
         entities:
-          - sensor.froling_pe1_puffer_temperatur_oben
-          - sensor.froling_pe1_puffer_temperatur_mitte
-          - sensor.froling_pe1_puffer_temperatur_unten
+          - sensor.froehling_pe1_puffer_temperatur_oben
+          - sensor.froehling_pe1_puffer_temperatur_mitte
+          - sensor.froehling_pe1_puffer_temperatur_unten
 
   - title: Pellets
     path: pellets
@@ -124,14 +124,14 @@ views:
       - type: entities
         title: Pelletspeicher
         entities:
-          - sensor.froling_pe1_pelletfullstand
-          - sensor.froling_pe1_pelletverbrauch_kg
-          - sensor.froling_pe1_pelletverbrauch_gesamt
+          - sensor.froehling_pe1_pelletfuellstand
+          - sensor.froehling_pe1_pelletverbrauch_kg
+          - sensor.froehling_pe1_pelletverbrauch_gesamt
       - type: history-graph
         title: Pelletfüllstand
         hours_to_show: 168
         entities:
-          - sensor.froling_pe1_pelletfullstand
+          - sensor.froehling_pe1_pelletfuellstand
       - type: statistics-graph
         title: Pelletverbrauch
         days_to_show: 30
@@ -139,8 +139,8 @@ views:
         stat_types:
           - state
         entities:
-          - sensor.froling_pe1_pelletverbrauch_kg
-          - sensor.froling_pe1_pelletverbrauch_gesamt
+          - sensor.froehling_pe1_pelletverbrauch_kg
+          - sensor.froehling_pe1_pelletverbrauch_gesamt
 
   - title: Steuerung
     path: steuerung
@@ -155,9 +155,9 @@ views:
       - type: entities
         title: Steuerung Heizkreis 1
         entities:
-          - select.froling_pe1_hk1_betriebsart
-          - number.froling_pe1_hk1_vorlauf_bei_minus_10degc_aussentemperatur
-          - number.froling_pe1_hk1_vorlauf_bei_plus_10degc_aussentemperatur
+          - select.froehling_pe1_hk1_betriebsart
+          - number.froehling_pe1_hk1_vorlauf_bei_minus_10c_aussentemperatur
+          - number.froehling_pe1_hk1_vorlauf_bei_plus_10c_aussentemperatur
 
   - title: Rohwerte
     path: rohwerte
@@ -166,17 +166,17 @@ views:
       - type: entities
         title: Alle Basis-Entities
         entities:
-          - sensor.froling_pe1_anlagenzustand
-          - sensor.froling_pe1_kesselzustand
-          - sensor.froling_pe1_kesseltemperatur
-          - sensor.froling_pe1_rucklauftemperatur
-          - sensor.froling_pe1_aussentemperatur
-          - sensor.froling_pe1_hk1_vorlauf_ist
-          - sensor.froling_pe1_hk1_vorlauf_soll
-          - sensor.froling_pe1_puffer_temperatur_oben
-          - sensor.froling_pe1_puffer_temperatur_mitte
-          - sensor.froling_pe1_puffer_temperatur_unten
-          - sensor.froling_pe1_puffer_ladezustand
-          - sensor.froling_pe1_pelletfullstand
-          - sensor.froling_pe1_pelletverbrauch_kg
-          - sensor.froling_pe1_pelletverbrauch_gesamt
+          - sensor.froehling_pe1_anlagenzustand
+          - sensor.froehling_pe1_kesselzustand
+          - sensor.froehling_pe1_kesseltemperatur
+          - sensor.froehling_pe1_ruecklauftemperatur
+          - sensor.froehling_pe1_aussentemperatur
+          - sensor.froehling_pe1_hk1_vorlauf_ist
+          - sensor.froehling_pe1_hk1_vorlauf_soll
+          - sensor.froehling_pe1_puffer_temperatur_oben
+          - sensor.froehling_pe1_puffer_temperatur_mitte
+          - sensor.froehling_pe1_puffer_temperatur_unten
+          - sensor.froehling_pe1_puffer_ladezustand
+          - sensor.froehling_pe1_pelletfuellstand
+          - sensor.froehling_pe1_pelletverbrauch_kg
+          - sensor.froehling_pe1_pelletverbrauch_gesamt

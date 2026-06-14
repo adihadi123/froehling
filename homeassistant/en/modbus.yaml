@@ -3,28 +3,28 @@
   host: 192.168.178.xxx # adjust to the IP address of your RS232/RS485-to-Ethernet gateway
   port: 502
   sensors:
-    - name: Froeling PE1 System Status Enum
+    - name: froehling PE1 System Status Enum
       unique_id: froehling_pe1_system_status_enum
       slave: 2
       input_type: input
       address: 4000
       scan_interval: 30
       device_class: enum
-    - name: Froeling PE1 Furnace Status Enum
+    - name: froehling PE1 Furnace Status Enum
       unique_id: froehling_pe1_furnace_status_enum
       slave: 2
       input_type: input
       address: 4001
       scan_interval: 30
       device_class: enum
-    - name: Froeling PE1 HC1 Heating Mode Enum
+    - name: froehling PE1 HC1 Heating Mode Enum
       unique_id: froehling_pe1_hc1_heating_mode_enum
       slave: 2
       input_type: holding
       address: 8046
       scan_interval: 30
       device_class: enum
-    - name: Froeling PE1 Furnace Temperature
+    - name: froehling PE1 Furnace Temperature
       unique_id: froehling_pe1_furnace_temperature
       slave: 2
       input_type: input
@@ -35,7 +35,7 @@
       device_class: temperature
       state_class: measurement
       unit_of_measurement: °C
-    - name: Froeling PE1 Return Flow Temperature
+    - name: froehling PE1 Return Flow Temperature
       unique_id: froehling_pe1_return_flow_temperature
       slave: 2
       input_type: input
@@ -46,7 +46,7 @@
       device_class: temperature
       state_class: measurement
       unit_of_measurement: °C
-    - name: Froeling PE1 Outside Temperature
+    - name: froehling PE1 Outside Temperature
       unique_id: froehling_pe1_outside_temperature
       slave: 2
       input_type: input
@@ -57,7 +57,7 @@
       device_class: temperature
       state_class: measurement
       unit_of_measurement: °C
-    - name: Froeling PE1 HC1 Flow Temperature Actual
+    - name: froehling PE1 HC1 Flow Temperature Actual
       unique_id: froehling_pe1_hc1_flow_temperature_actual
       slave: 2
       input_type: input
@@ -68,7 +68,7 @@
       device_class: temperature
       state_class: measurement
       unit_of_measurement: °C
-    - name: Froeling PE1 HC1 Flow Temperature Target
+    - name: froehling PE1 HC1 Flow Temperature Target
       unique_id: froehling_pe1_hc1_flow_temperature_target
       slave: 2
       input_type: input
@@ -79,7 +79,7 @@
       device_class: temperature
       state_class: measurement
       unit_of_measurement: °C
-    - name: Froeling PE1 Buffer Temperature Top
+    - name: froehling PE1 Buffer Temperature Top
       unique_id: froehling_pe1_buffer_temperature_top
       slave: 2
       input_type: input
@@ -90,7 +90,7 @@
       device_class: temperature
       state_class: measurement
       unit_of_measurement: °C
-    - name: Froeling PE1 Buffer Temperature Middle
+    - name: froehling PE1 Buffer Temperature Middle
       unique_id: froehling_pe1_buffer_temperature_middle
       slave: 2
       input_type: input
@@ -101,7 +101,7 @@
       device_class: temperature
       state_class: measurement
       unit_of_measurement: °C
-    - name: Froeling PE1 Buffer Temperature Bottom
+    - name: froehling PE1 Buffer Temperature Bottom
       unique_id: froehling_pe1_buffer_temperature_bottom
       slave: 2
       input_type: input
@@ -112,7 +112,7 @@
       device_class: temperature
       state_class: measurement
       unit_of_measurement: °C
-    - name: Froeling PE1 Buffer Charge
+    - name: froehling PE1 Buffer Charge
       unique_id: froehling_pe1_buffer_charge
       slave: 2
       input_type: input
@@ -121,7 +121,7 @@
       scale: 1
       precision: 0
       unit_of_measurement: "%"
-    - name: Froeling PE1 Pellet Fill Level
+    - name: froehling PE1 Pellet Fill Level
       unique_id: froehling_pe1_pellet_fill_level
       slave: 2
       input_type: input
@@ -130,7 +130,7 @@
       scale: 0.005
       precision: 1
       unit_of_measurement: "%"
-    - name: Froeling PE1 Pellet Consumption kg
+    - name: froehling PE1 Pellet Consumption kg
       unique_id: froehling_pe1_pellet_consumption_kg
       slave: 2
       input_type: input

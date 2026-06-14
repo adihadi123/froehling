@@ -1,5 +1,5 @@
 - sensor:
-    - name: "Fröling PE1 Anlagenzustand"
+    - name: "froehling PE1 Anlagenzustand"
       unique_id: froehling_pe1_anlagenzustand
       state: >
         {% set mapper = {
@@ -7,9 +7,9 @@
           '3': 'Scheitholzbetrieb', '4': 'Reinigen', '5': 'Ausgeschaltet',
           '6': 'Extraheizen', '7': 'Kaminkehrer', '8': 'Reinigen'
         } %}
-        {{ mapper.get(states('sensor.froling_pe1_anlagenzustand_enum'), 'Unbekannt') }}
+        {{ mapper.get(states('sensor.froehling_pe1_anlagenzustand_enum'), 'Unbekannt') }}
       icon: mdi:home-thermometer
-    - name: "Fröling PE1 Kesselzustand"
+    - name: "froehling PE1 Kesselzustand"
       unique_id: froehling_pe1_kesselzustand
       state: >
         {% set mapper = {
@@ -18,11 +18,11 @@
           '7': 'Vorbereitung', '8': 'Vorwärmen', '9': 'Zünden',
           '15': 'Abreinigen', '19': 'Betriebsbereit'
         } %}
-        {{ mapper.get(states('sensor.froling_pe1_kesselzustand_enum'), 'Code ' ~ states('sensor.froling_pe1_kesselzustand_enum')) }}
+        {{ mapper.get(states('sensor.froehling_pe1_kesselzustand_enum'), 'Code ' ~ states('sensor.froehling_pe1_kesselzustand_enum')) }}
       icon: mdi:fire
-    - name: "Fröling PE1 HK1 Betriebsart"
+    - name: "froehling PE1 HK1 Betriebsart"
       unique_id: froehling_pe1_hk1_betriebsart
       state: >
         {% set mapper = {'0':'Aus','1':'Automatik','2':'Extraheizen','3':'Absenken','4':'Dauerabsenken','5':'Partybetrieb'} %}
-        {{ mapper.get(states('sensor.froling_pe1_hk1_betriebsart_enum'), 'Unbekannt') }}
+        {{ mapper.get(states('sensor.froehling_pe1_hk1_betriebsart_enum'), 'Unbekannt') }}
       icon: mdi:radiator

@@ -1,4 +1,4 @@
-title: Froeling PE1
+title: froehling PE1
 views:
   - title: Overview
     path: overview
@@ -6,7 +6,7 @@ views:
     cards:
       - type: markdown
         content: |
-          # Froeling PE1
+          # froehling PE1
           Overview for furnace, heating circuit 1, buffer tank and pellet storage.
 
           Note: if a card reports a missing entity, adjust the entity ID to your Home Assistant installation.
@@ -14,17 +14,17 @@ views:
         title: Status
         show_header_toggle: false
         entities:
-          - entity: sensor.froeling_pe1_system_status
+          - entity: sensor.froehling_pe1_system_status
             name: System status
-          - entity: sensor.froeling_pe1_furnace_status
+          - entity: sensor.froehling_pe1_furnace_status
             name: Furnace status
-          - entity: sensor.froeling_pe1_furnace_temperature
+          - entity: sensor.froehling_pe1_furnace_temperature
             name: Furnace temperature
-          - entity: sensor.froeling_pe1_outside_temperature
+          - entity: sensor.froehling_pe1_outside_temperature
             name: Outside temperature
       - type: gauge
         name: Buffer charge
-        entity: sensor.froeling_pe1_buffer_charge
+        entity: sensor.froehling_pe1_buffer_charge
         min: 0
         max: 100
         severity:
@@ -33,7 +33,7 @@ views:
           red: 0
       - type: gauge
         name: Pellet fill level
-        entity: sensor.froeling_pe1_pellet_fill_level
+        entity: sensor.froehling_pe1_pellet_fill_level
         min: 0
         max: 100
         severity:
@@ -45,15 +45,15 @@ views:
         hours_to_show: 24
         refresh_interval: 60
         entities:
-          - entity: sensor.froeling_pe1_furnace_temperature
+          - entity: sensor.froehling_pe1_furnace_temperature
             name: Furnace
-          - entity: sensor.froeling_pe1_outside_temperature
+          - entity: sensor.froehling_pe1_outside_temperature
             name: Outside
-          - entity: sensor.froeling_pe1_hc1_flow_temperature_actual
+          - entity: sensor.froehling_pe1_hc1_flow_temperature_actual
             name: HC1 flow actual
-          - entity: sensor.froeling_pe1_buffer_temperature_top
+          - entity: sensor.froehling_pe1_buffer_temperature_top
             name: Buffer top
-          - entity: sensor.froeling_pe1_buffer_temperature_bottom
+          - entity: sensor.froehling_pe1_buffer_temperature_bottom
             name: Buffer bottom
 
   - title: Furnace
@@ -63,19 +63,19 @@ views:
       - type: entities
         title: Furnace values
         entities:
-          - sensor.froeling_pe1_system_status
-          - sensor.froeling_pe1_furnace_status
-          - sensor.froeling_pe1_furnace_temperature
-          - sensor.froeling_pe1_return_flow_temperature
-          - sensor.froeling_pe1_operating_hours
-          - sensor.froeling_pe1_hours_since_last_maintenance
-          - sensor.froeling_pe1_hours_until_ash_removal
+          - sensor.froehling_pe1_system_status
+          - sensor.froehling_pe1_furnace_status
+          - sensor.froehling_pe1_furnace_temperature
+          - sensor.froehling_pe1_return_flow_temperature
+          - sensor.froehling_pe1_operating_hours
+          - sensor.froehling_pe1_hours_since_last_maintenance
+          - sensor.froehling_pe1_hours_until_ash_removal
       - type: history-graph
         title: Furnace / return flow temperature
         hours_to_show: 24
         entities:
-          - sensor.froeling_pe1_furnace_temperature
-          - sensor.froeling_pe1_return_flow_temperature
+          - sensor.froehling_pe1_furnace_temperature
+          - sensor.froehling_pe1_return_flow_temperature
 
   - title: Heating circuit 1
     path: heating-circuit-1
@@ -84,18 +84,18 @@ views:
       - type: entities
         title: Heating circuit 1
         entities:
-          - sensor.froeling_pe1_hc1_flow_temperature_actual
-          - sensor.froeling_pe1_hc1_flow_temperature_target
-          - binary_sensor.froeling_pe1_hc1_pump
-          - select.froeling_pe1_hc1_heating_mode
-          - number.froeling_pe1_hc1_flow_at_minus_10degc_outside_temperature
-          - number.froeling_pe1_hc1_flow_at_plus_10degc_outside_temperature
+          - sensor.froehling_pe1_hc1_flow_temperature_actual
+          - sensor.froehling_pe1_hc1_flow_temperature_target
+          - binary_sensor.froehling_pe1_hc1_pump
+          - select.froehling_pe1_hc1_heating_mode
+          - number.froehling_pe1_hc1_flow_at_minus_10c_outside_temperature
+          - number.froehling_pe1_hc1_flow_at_plus_10c_outside_temperature
       - type: history-graph
         title: HC1 flow
         hours_to_show: 24
         entities:
-          - sensor.froeling_pe1_hc1_flow_temperature_actual
-          - sensor.froeling_pe1_hc1_flow_temperature_target
+          - sensor.froehling_pe1_hc1_flow_temperature_actual
+          - sensor.froehling_pe1_hc1_flow_temperature_target
 
   - title: Buffer
     path: buffer
@@ -104,18 +104,18 @@ views:
       - type: entities
         title: Buffer tank
         entities:
-          - sensor.froeling_pe1_buffer_temperature_top
-          - sensor.froeling_pe1_buffer_temperature_middle
-          - sensor.froeling_pe1_buffer_temperature_bottom
-          - sensor.froeling_pe1_buffer_charge
-          - sensor.froeling_pe1_buffer_pump_control
+          - sensor.froehling_pe1_buffer_temperature_top
+          - sensor.froehling_pe1_buffer_temperature_middle
+          - sensor.froehling_pe1_buffer_temperature_bottom
+          - sensor.froehling_pe1_buffer_charge
+          - sensor.froehling_pe1_buffer_pump_control
       - type: history-graph
         title: Buffer temperatures
         hours_to_show: 24
         entities:
-          - sensor.froeling_pe1_buffer_temperature_top
-          - sensor.froeling_pe1_buffer_temperature_middle
-          - sensor.froeling_pe1_buffer_temperature_bottom
+          - sensor.froehling_pe1_buffer_temperature_top
+          - sensor.froehling_pe1_buffer_temperature_middle
+          - sensor.froehling_pe1_buffer_temperature_bottom
 
   - title: Pellets
     path: pellets
@@ -124,14 +124,14 @@ views:
       - type: entities
         title: Pellet storage
         entities:
-          - sensor.froeling_pe1_pellet_fill_level
-          - sensor.froeling_pe1_pellet_consumption_kg
-          - sensor.froeling_pe1_total_pellet_consumption
+          - sensor.froehling_pe1_pellet_fill_level
+          - sensor.froehling_pe1_pellet_consumption_kg
+          - sensor.froehling_pe1_total_pellet_consumption
       - type: history-graph
         title: Pellet fill level
         hours_to_show: 168
         entities:
-          - sensor.froeling_pe1_pellet_fill_level
+          - sensor.froehling_pe1_pellet_fill_level
       - type: statistics-graph
         title: Pellet consumption
         days_to_show: 30
@@ -139,8 +139,8 @@ views:
         stat_types:
           - state
         entities:
-          - sensor.froeling_pe1_pellet_consumption_kg
-          - sensor.froeling_pe1_total_pellet_consumption
+          - sensor.froehling_pe1_pellet_consumption_kg
+          - sensor.froehling_pe1_total_pellet_consumption
 
   - title: Controls
     path: controls
@@ -155,9 +155,9 @@ views:
       - type: entities
         title: Heating circuit 1 controls
         entities:
-          - select.froeling_pe1_hc1_heating_mode
-          - number.froeling_pe1_hc1_flow_at_minus_10degc_outside_temperature
-          - number.froeling_pe1_hc1_flow_at_plus_10degc_outside_temperature
+          - select.froehling_pe1_hc1_heating_mode
+          - number.froehling_pe1_hc1_flow_at_minus_10c_outside_temperature
+          - number.froehling_pe1_hc1_flow_at_plus_10c_outside_temperature
 
   - title: Raw values
     path: raw-values
@@ -166,17 +166,17 @@ views:
       - type: entities
         title: All basic entities
         entities:
-          - sensor.froeling_pe1_system_status
-          - sensor.froeling_pe1_furnace_status
-          - sensor.froeling_pe1_furnace_temperature
-          - sensor.froeling_pe1_return_flow_temperature
-          - sensor.froeling_pe1_outside_temperature
-          - sensor.froeling_pe1_hc1_flow_temperature_actual
-          - sensor.froeling_pe1_hc1_flow_temperature_target
-          - sensor.froeling_pe1_buffer_temperature_top
-          - sensor.froeling_pe1_buffer_temperature_middle
-          - sensor.froeling_pe1_buffer_temperature_bottom
-          - sensor.froeling_pe1_buffer_charge
-          - sensor.froeling_pe1_pellet_fill_level
-          - sensor.froeling_pe1_pellet_consumption_kg
-          - sensor.froeling_pe1_total_pellet_consumption
+          - sensor.froehling_pe1_system_status
+          - sensor.froehling_pe1_furnace_status
+          - sensor.froehling_pe1_furnace_temperature
+          - sensor.froehling_pe1_return_flow_temperature
+          - sensor.froehling_pe1_outside_temperature
+          - sensor.froehling_pe1_hc1_flow_temperature_actual
+          - sensor.froehling_pe1_hc1_flow_temperature_target
+          - sensor.froehling_pe1_buffer_temperature_top
+          - sensor.froehling_pe1_buffer_temperature_middle
+          - sensor.froehling_pe1_buffer_temperature_bottom
+          - sensor.froehling_pe1_buffer_charge
+          - sensor.froehling_pe1_pellet_fill_level
+          - sensor.froehling_pe1_pellet_consumption_kg
+          - sensor.froehling_pe1_total_pellet_consumption
