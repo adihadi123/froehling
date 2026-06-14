@@ -82,6 +82,32 @@ Aktueller Zuschnitt:
 └── PROJEKTANALYSE.md
 ```
 
+
+
+## Offene Aufgaben / Open tasks
+
+Deutsch:
+
+- `docs/de/offene-aufgaben.md`
+
+English:
+
+- `docs/en/open-tasks.md`
+
+## Home Assistant Dashboard
+
+Dieses Repository enthält erste Lovelace-Dashboard-Vorlagen ohne HACS-Abhängigkeiten:
+
+Deutsch:
+
+- `homeassistant/de/dashboard.yaml`
+
+English:
+
+- `homeassistant/en/dashboard.yaml`
+
+Die Dashboards sind als Startpunkt gedacht. Nach dem ersten ESPHome-Import müssen die Entity-IDs in Home Assistant geprüft und ggf. angepasst werden.
+
 ## Quellen / Attribution
 
 Dieses Projekt fasst Ideen und Register aus diesen MIT-lizenzierten Projekten zusammen:

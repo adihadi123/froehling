@@ -19,7 +19,7 @@ select:
 number:
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "${friendly_name} HC1 Flow at -10°C Outside Temperature"
+    name: "${friendly_name} HC1 Flow at minus 10°C Outside Temperature"
     id: ${device_id}_hk1_vorlauf_minus_10
     address: 1032
     unit_of_measurement: "°C"
@@ -29,7 +29,7 @@ number:
     max_value: 110
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
-    name: "${friendly_name} HC1 Flow at +10°C Outside Temperature"
+    name: "${friendly_name} HC1 Flow at plus 10°C Outside Temperature"
     id: ${device_id}_hk1_vorlauf_plus_10
     address: 1031
     unit_of_measurement: "°C"
