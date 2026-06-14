@@ -1,0 +1,47 @@
+sensor:
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} Kesseltemperatur"
+    id: ${device_id}_kesseltemperatur
+    register_type: read
+    address: 0
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    value_type: U_WORD
+    filters: [{ multiply: 0.5 }]
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} Rücklauftemperatur"
+    id: ${device_id}_ruecklauftemperatur
+    register_type: read
+    address: 9
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    value_type: U_WORD
+    filters: [{ multiply: 0.5 }]
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} Betriebsstunden"
+    id: ${device_id}_betriebsstunden
+    register_type: read
+    address: 20
+    unit_of_measurement: "h"
+    value_type: U_WORD
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} Stunden seit letzter Wartung"
+    id: ${device_id}_stunden_seit_wartung
+    register_type: read
+    address: 55
+    unit_of_measurement: "h"
+    value_type: U_WORD
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} Stunden bis Asche entleeren"
+    id: ${device_id}_stunden_bis_asche_entleeren
+    register_type: read
+    address: 86
+    unit_of_measurement: "h"
+    value_type: U_WORD

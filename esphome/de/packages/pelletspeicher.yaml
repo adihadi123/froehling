@@ -1,0 +1,33 @@
+sensor:
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} Pelletfüllstand"
+    id: ${device_id}_pelletfuellstand
+    register_type: read
+    address: 21
+    unit_of_measurement: "%"
+    accuracy_decimals: 1
+    value_type: U_WORD
+    filters: [{ multiply: 0.0048309178743961 }]
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} Pelletverbrauch kg"
+    id: ${device_id}_pelletverbrauch_kg
+    register_type: read
+    address: 81
+    unit_of_measurement: "kg"
+    device_class: weight
+    state_class: total_increasing
+    value_type: U_WORD
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} Pelletverbrauch gesamt"
+    id: ${device_id}_pelletverbrauch_gesamt
+    register_type: read
+    address: 83
+    unit_of_measurement: "t"
+    device_class: weight
+    state_class: total_increasing
+    accuracy_decimals: 1
+    value_type: U_WORD
+    filters: [{ multiply: 0.1 }]

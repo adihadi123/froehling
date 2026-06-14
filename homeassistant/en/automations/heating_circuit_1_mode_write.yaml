@@ -1,0 +1,16 @@
+# Example: write HC1 heating mode to Modbus holding register 8046 through an input_select.
+# Verify hub name and entity IDs before use.
+
+alias: Froeling PE1 write HC1 heating mode
+mode: single
+trigger:
+  - platform: state
+    entity_id: input_select.froehling_pe1_hc1_heating_mode
+condition: []
+action:
+  - service: modbus.write_register
+    data:
+      hub: froehling_pe1
+      slave: 2
+      address: 8046
+      value: "{{ trigger.to_state.state[0] | int(0) }}"

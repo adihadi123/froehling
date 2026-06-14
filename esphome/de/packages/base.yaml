@@ -1,0 +1,61 @@
+text_sensor:
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} Anlagenzustand"
+    id: ${device_id}_anlagenzustand
+    register_type: read
+    address: 4000
+    raw_encode: HEXBYTES
+    lambda: |-
+      uint16_t value = modbus_controller::word_from_hex_str(x, 0);
+      switch (value) {
+        case 0: return std::string("Dauerlast");
+        case 1: return std::string("Brauchwasser");
+        case 2: return std::string("Automatik");
+        case 3: return std::string("Scheitholzbetrieb");
+        case 4: return std::string("Reinigen");
+        case 5: return std::string("Ausgeschaltet");
+        case 6: return std::string("Extraheizen");
+        case 7: return std::string("Kaminkehrer");
+        case 8: return std::string("Reinigen");
+        default: return std::string("Unbekannt");
+      }
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} Kesselzustand"
+    id: ${device_id}_kesselzustand
+    register_type: read
+    address: 4001
+    raw_encode: HEXBYTES
+    lambda: |-
+      uint16_t value = modbus_controller::word_from_hex_str(x, 0);
+      switch (value) {
+        case 0: return std::string("STÖRUNG");
+        case 1: return std::string("Kessel Aus");
+        case 2: return std::string("Anheizen");
+        case 3: return std::string("Heizen");
+        case 4: return std::string("Feuererhaltung");
+        case 5: return std::string("Feuer Aus");
+        case 6: return std::string("Tür offen");
+        case 7: return std::string("Vorbereitung");
+        case 8: return std::string("Vorwärmen");
+        case 9: return std::string("Zünden");
+        case 15: return std::string("Abreinigen");
+        case 19: return std::string("Betriebsbereit");
+        default: return std::string("Code " + to_string(value));
+      }
+
+
+sensor:
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} Außentemperatur"
+    id: ${device_id}_aussentemperatur
+    register_type: read
+    address: 1000
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    value_type: S_WORD
+    filters:
+      - multiply: 0.5

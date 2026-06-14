@@ -1,0 +1,39 @@
+# ACHTUNG: Diese Entitäten schreiben auf Holding Register.
+# Erst aktiv nutzen, wenn die Register für deine PE1/Lambdatronic-Version geprüft wurden.
+
+select:
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} HK1 Betriebsart"
+    id: ${device_id}_hk1_betriebsart
+    address: 8046
+    value_type: U_WORD
+    optionsmap:
+      "Aus": 0
+      "Automatik": 1
+      "Extraheizen": 2
+      "Absenken": 3
+      "Dauerabsenken": 4
+      "Partybetrieb": 5
+
+number:
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} HK1 Vorlauf bei -10°C Außentemperatur"
+    id: ${device_id}_hk1_vorlauf_minus_10
+    address: 1032
+    unit_of_measurement: "°C"
+    value_type: U_WORD
+    multiply: 2
+    min_value: 10
+    max_value: 110
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} HK1 Vorlauf bei +10°C Außentemperatur"
+    id: ${device_id}_hk1_vorlauf_plus_10
+    address: 1031
+    unit_of_measurement: "°C"
+    value_type: U_WORD
+    multiply: 2
+    min_value: 10
+    max_value: 110

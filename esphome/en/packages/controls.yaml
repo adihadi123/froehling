@@ -1,0 +1,39 @@
+# WARNING: These entities write to holding registers.
+# Only use them after verifying the registers for your PE1/Lambdatronic firmware.
+
+select:
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} HC1 Heating Mode"
+    id: ${device_id}_hk1_betriebsart
+    address: 8046
+    value_type: U_WORD
+    optionsmap:
+      "Off": 0
+      "Automatic": 1
+      "Extra heating": 2
+      "Setback": 3
+      "Continuous setback": 4
+      "Party mode": 5
+
+number:
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} HC1 Flow at -10°C Outside Temperature"
+    id: ${device_id}_hk1_vorlauf_minus_10
+    address: 1032
+    unit_of_measurement: "°C"
+    value_type: U_WORD
+    multiply: 2
+    min_value: 10
+    max_value: 110
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} HC1 Flow at +10°C Outside Temperature"
+    id: ${device_id}_hk1_vorlauf_plus_10
+    address: 1031
+    unit_of_measurement: "°C"
+    value_type: U_WORD
+    multiply: 2
+    min_value: 10
+    max_value: 110

@@ -1,0 +1,50 @@
+sensor:
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} Puffer Temperatur oben"
+    id: ${device_id}_puffer_temperatur_oben
+    register_type: read
+    address: 2000
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    value_type: U_WORD
+    filters: [{ multiply: 0.5 }]
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} Puffer Temperatur Mitte"
+    id: ${device_id}_puffer_temperatur_mitte
+    register_type: read
+    address: 2001
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    value_type: U_WORD
+    filters: [{ multiply: 0.5 }]
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} Puffer Temperatur unten"
+    id: ${device_id}_puffer_temperatur_unten
+    register_type: read
+    address: 2002
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    value_type: U_WORD
+    filters: [{ multiply: 0.5 }]
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} Puffer Ladezustand"
+    id: ${device_id}_puffer_ladezustand
+    register_type: read
+    address: 2006
+    unit_of_measurement: "%"
+    value_type: U_WORD
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${friendly_name} Pufferpumpe Ansteuerung"
+    id: ${device_id}_pufferpumpe_ansteuerung
+    register_type: read
+    address: 2003
+    unit_of_measurement: "%"
+    value_type: U_WORD
