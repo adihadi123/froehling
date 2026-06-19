@@ -117,6 +117,15 @@ English:
 
 Naming-Konvention: Geräte- und Entity-Basis ist bewusst `froehling PE1`, damit Home Assistant Entity-IDs mit `froehling_pe1_...` erzeugt und keine Umlaute im Prefix vorkommen.
 
+## Home Assistant Custom Integration
+
+Dieses Repository enthält jetzt auch eine read-only Custom Integration für Roys aktuell erreichbaren ESPHome-Webserver:
+
+- `custom_components/froehling_pe1/`
+- Anleitung: `docs/de/home-assistant-custom-integration.md`
+
+Die Integration liest `http://192.168.178.192/events` lokal aus und legt die Fröling-Werte als Home-Assistant-Entities an, ohne Heizungsparameter zu schreiben. Sie ist als Zwischen-/Praxislösung gedacht, solange die offizielle ESPHome-Integration den echten `froehling_api_key` benötigt.
+
 ## Home Assistant Dashboard
 
 Dieses Repository enthält erste Lovelace-Dashboard-Vorlagen ohne HACS-Abhängigkeiten:

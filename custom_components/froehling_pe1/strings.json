@@ -1,0 +1,22 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Fröling PE1 Web",
+        "description": "Connect to the read-only ESPHome web_server event stream.",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "name": "Name"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to the ESPHome web server event stream.",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "This Fröling PE1 endpoint is already configured."
+    }
+  }
+}

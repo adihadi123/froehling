@@ -1,0 +1,7 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# ESPHome local build/secrets
+.esphome/
+secrets.yaml
