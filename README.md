@@ -117,28 +117,45 @@ English:
 
 Naming-Konvention: Geräte- und Entity-Basis ist bewusst `froehling PE1`, damit Home Assistant Entity-IDs mit `froehling_pe1_...` erzeugt und keine Umlaute im Prefix vorkommen.
 
+## Home Assistant Live-Integration
+
+Roys Anlage ist inzwischen über die offizielle ESPHome-Integration in Home Assistant eingebunden.
+
+Live-Dokumentation:
+
+- `docs/de/home-assistant-live-integration.md`
+
+Wichtiger Live-Stand:
+
+- ESP/IP: `192.168.178.192`
+- Home-Assistant-Config-Entry: `froehling PE1`
+- Domain: `esphome`
+- Entity-Prefix in Roys HA: `froehling_pe1_froehling_pe1_...`
+
+Der echte `froehling_api_key` bleibt ausschließlich in Home Assistant unter `/config/esphome/secrets.yaml` und gehört nicht ins Repository.
+
 ## Home Assistant Custom Integration
 
-Dieses Repository enthält jetzt auch eine read-only Custom Integration für Roys aktuell erreichbaren ESPHome-Webserver:
+Dieses Repository enthält zusätzlich eine read-only Custom Integration für den ESPHome-Webserver:
 
 - `custom_components/froehling_pe1/`
 - Anleitung: `docs/de/home-assistant-custom-integration.md`
 
-Die Integration liest `http://192.168.178.192/events` lokal aus und legt die Fröling-Werte als Home-Assistant-Entities an, ohne Heizungsparameter zu schreiben. Sie ist als Zwischen-/Praxislösung gedacht, solange die offizielle ESPHome-Integration den echten `froehling_api_key` benötigt.
+Die Integration liest `http://192.168.178.192/events` lokal aus und legt die Fröling-Werte als Home-Assistant-Entities an, ohne Heizungsparameter zu schreiben. Sie bleibt als Fallback gedacht, falls die offizielle ESPHome-Integration nicht nutzbar ist oder der API-Key nicht verfügbar ist.
 
 ## Home Assistant Dashboard
 
-Dieses Repository enthält erste Lovelace-Dashboard-Vorlagen ohne HACS-Abhängigkeiten:
+Dieses Repository enthält Lovelace-Dashboard-Vorlagen ohne HACS-Abhängigkeiten:
 
-Deutsch:
+Deutsch, auf Roys live verifizierte ESPHome-Entity-IDs angepasst:
 
 - `homeassistant/de/dashboard.yaml`
 
-English:
+English, generischer Startpunkt:
 
 - `homeassistant/en/dashboard.yaml`
 
-Die Dashboards sind als Startpunkt gedacht. Nach dem ersten ESPHome-Import müssen die Entity-IDs in Home Assistant geprüft und ggf. angepasst werden.
+Das deutsche Dashboard nutzt bewusst nur read-only Karten. Schreib-/Steuer-Entities werden erst eingebaut, wenn Register und Wertebereiche an der echten Anlage geprüft sind.
 
 ## Quellen / Attribution
 
