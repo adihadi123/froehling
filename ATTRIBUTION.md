@@ -6,6 +6,7 @@ Dieses Repository basiert konzeptionell und teilweise in Konfigurationsform auf 
    - ESPHome-Modbus-RTU-Ansatz
    - Registeradressen für Lambdatronic 3200
    - Statusmappings und Komponentenaufteilung
+   - SVG-/CSS-Dashboard-Assets unter `homeassistant/de/www/froeling/`
 
 2. `smokyflex/pe1-modbus`
    - Home-Assistant-Modbus-TCP-Ansatz

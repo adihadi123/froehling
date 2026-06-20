@@ -84,7 +84,7 @@ Live-Dashboard in Home Assistant:
 - Titel: `Fröling PE1`
 - URL-Pfad: `froehling-pe1`
 - Modus: Storage Dashboard
-- Views: Übersicht, Kessel, Heizkreis 1, Puffer, Pellets & Wartung, Rohwerte
+- Views: Visualisierung, Kessel, Heizkreis 1, Puffer, Pellets & Austragung, Rohwerte
 
 Repo-Vorlage:
 
@@ -92,13 +92,43 @@ Repo-Vorlage:
 homeassistant/de/dashboard.yaml
 ```
 
-Verifikation bei Einrichtung:
+Das Dashboard nutzt SVG-Bilder aus `GyroGearl00se/ESPHome-Froeling-Lambdatronic_3200` und legt Roys live verifizierte ESPHome-Entities als Lovelace-`picture-elements`-Overlays darüber. So bleibt das Dashboard ohne `custom:floorplan-card` lauffähig.
+
+Lokale Medien im Repository:
+
+```text
+homeassistant/de/www/froeling/froeling_aio.svg
+homeassistant/de/www/froeling/froeling_kessel.svg
+homeassistant/de/www/froeling/froeling_heizkreis01.svg
+homeassistant/de/www/froeling/froeling_puffer01.svg
+homeassistant/de/www/froeling/froeling_austragung.svg
+homeassistant/de/www/froeling/home.css
+```
+
+Zielpfad in Home Assistant:
+
+```text
+/config/www/froeling/
+```
+
+HTTP-Pfade in Lovelace:
+
+```text
+/local/froeling/froeling_aio.svg
+/local/froeling/froeling_kessel.svg
+/local/froeling/froeling_heizkreis01.svg
+/local/froeling/froeling_puffer01.svg
+/local/froeling/froeling_austragung.svg
+```
+
+Verifikation nach Umstellung auf die GyroGearl00se-Bilder:
 
 ```text
 Dashboard vorhanden: ja
 Views: 6
 Entity-Referenzen: 19
 Fehlende Entity-Referenzen: 0
+SVG/CSS unter /local/froeling/: HTTP 200
 ```
 
 ## Schreib-/Steuer-Entities

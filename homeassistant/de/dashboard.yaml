@@ -1,311 +1,664 @@
 title: Fröling PE1
 views:
-  - title: Übersicht
-    path: uebersicht
-    icon: mdi:fire
+- title: Visualisierung
+  path: visualisierung
+  icon: mdi:home-thermometer
+  cards:
+  - type: markdown
+    content: '# Fröling PE1
+
+
+      Visualisierung mit SVG-Bildern aus `GyroGearl00se/ESPHome-Froeling-Lambdatronic_3200`.
+      Die Overlays nutzen Roys live verifizierte ESPHome-Entities. Schreibzugriffe
+      bleiben deaktiviert.'
+  - type: picture-elements
+    image: /local/froeling/froeling_aio.svg
+    elements:
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_aussentemperatur
+      tap_action:
+        action: more-info
+      style:
+        left: 66%
+        top: 7%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_kesseltemperatur
+      tap_action:
+        action: more-info
+      style:
+        left: 45%
+        top: 68%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_puffer_temperatur_oben
+      tap_action:
+        action: more-info
+      style:
+        left: 72%
+        top: 72%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_puffer_temperatur_unten
+      tap_action:
+        action: more-info
+      style:
+        left: 72%
+        top: 90%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_puffer_ladezustand
+      tap_action:
+        action: more-info
+      style:
+        left: 72%
+        top: 80%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_pufferpumpe_ansteuerung
+      tap_action:
+        action: more-info
+      style:
+        left: 63%
+        top: 92%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_ist
+      tap_action:
+        action: more-info
+      style:
+        left: 88%
+        top: 28%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_pelletfuellstand
+      tap_action:
+        action: more-info
+      style:
+        left: 30%
+        top: 57%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_stunden_bis_asche_entleeren
+      tap_action:
+        action: more-info
+      style:
+        left: 30%
+        top: 91%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_kesselzustand
+      tap_action:
+        action: more-info
+      style:
+        left: 43%
+        top: 84%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#fff'
+        background: rgba(30,30,30,.78)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-icon
+      entity: binary_sensor.froehling_pe1_froehling_pe1_hk1_pumpe
+      tap_action:
+        action: more-info
+      style:
+        left: 87%
+        top: 36%
+        --mdc-icon-size: 28px
+        --state-icon-color: var(--state-icon-color)
+      icon: mdi:pump
+    entity: sensor.froehling_pe1_froehling_pe1_anlagenzustand
+- title: Kessel
+  path: kessel
+  icon: mdi:fire
+  cards:
+  - type: picture-elements
+    image: /local/froeling/froeling_kessel.svg
+    elements:
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_pelletfuellstand
+      tap_action:
+        action: more-info
+      style:
+        left: 20%
+        top: 17%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_stunden_bis_asche_entleeren
+      tap_action:
+        action: more-info
+      style:
+        left: 20%
+        top: 83%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_kesseltemperatur
+      tap_action:
+        action: more-info
+      style:
+        left: 41%
+        top: 38%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_pufferpumpe_ansteuerung
+      tap_action:
+        action: more-info
+      style:
+        left: 89%
+        top: 79%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_kesselzustand
+      tap_action:
+        action: more-info
+      style:
+        left: 42%
+        top: 66%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#fff'
+        background: rgba(30,30,30,.78)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    entity: sensor.froehling_pe1_froehling_pe1_kesseltemperatur
+  - type: grid
+    columns: 2
+    square: false
     cards:
-      - type: markdown
-        content: |
-          # Fröling PE1
+    - type: gauge
+      entity: sensor.froehling_pe1_froehling_pe1_kesseltemperatur
+      name: Kesseltemperatur
+      min: 0
+      max: 100
+      severity:
+        green: 0
+        yellow: 65
+        red: 85
+    - type: gauge
+      entity: sensor.froehling_pe1_froehling_pe1_ruecklauftemperatur
+      name: Rücklauf
+      min: 0
+      max: 100
+    - type: gauge
+      entity: sensor.froehling_pe1_froehling_pe1_pelletfuellstand
+      name: Pelletfüllstand
+      min: 0
+      max: 100
+      severity:
+        red: 0
+        yellow: 20
+        green: 50
+    - type: gauge
+      entity: sensor.froehling_pe1_froehling_pe1_pufferpumpe_ansteuerung
+      name: Pufferpumpe
+      min: 0
+      max: 100
+  - type: entities
+    title: Kesselwerte
+    entities:
+    - sensor.froehling_pe1_froehling_pe1_anlagenzustand
+    - sensor.froehling_pe1_froehling_pe1_kesselzustand
+    - sensor.froehling_pe1_froehling_pe1_kesseltemperatur
+    - sensor.froehling_pe1_froehling_pe1_ruecklauftemperatur
+    - sensor.froehling_pe1_froehling_pe1_betriebsstunden
+    - sensor.froehling_pe1_froehling_pe1_stunden_seit_letzter_wartung
+    - sensor.froehling_pe1_froehling_pe1_stunden_bis_asche_entleeren
+    - sensor.froehling_pe1_froehling_pe1_pelletfuellstand
+    - sensor.froehling_pe1_froehling_pe1_pelletverbrauch_kg
+    - sensor.froehling_pe1_froehling_pe1_pelletverbrauch_gesamt
+- title: Heizkreis 1
+  path: heizkreis-1
+  icon: mdi:radiator
+  cards:
+  - type: picture-elements
+    image: /local/froeling/froeling_heizkreis01.svg
+    elements:
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_aussentemperatur
+      tap_action:
+        action: more-info
+      style:
+        left: 45%
+        top: 22%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_ist
+      tap_action:
+        action: more-info
+      style:
+        left: 41%
+        top: 68%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_soll
+      tap_action:
+        action: more-info
+      style:
+        left: 69%
+        top: 57%
+        font-size: 0.85em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.78)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-icon
+      entity: binary_sensor.froehling_pe1_froehling_pe1_hk1_pumpe
+      tap_action:
+        action: more-info
+      style:
+        left: 19%
+        top: 76%
+        --mdc-icon-size: 28px
+        --state-icon-color: var(--state-icon-color)
+      icon: mdi:pump
+    entity: sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_ist
+  - type: entities
+    title: Heizkreis 1
+    entities:
+    - binary_sensor.froehling_pe1_froehling_pe1_hk1_pumpe
+    - sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_ist
+    - sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_soll
+    - sensor.froehling_pe1_froehling_pe1_aussentemperatur
+  - type: markdown
+    content: '## Steuer-Entities bleiben gesperrt
 
-          Live-Dashboard für Roys Fröling PE1 über die offizielle Home-Assistant-ESPHome-Integration.
 
-          Verifizierte ESPHome-Config-Entry: `froehling PE1`
-
-          Hinweis: Schreib-/Steuer-Entities werden in diesem Dashboard bewusst nicht als Bedienelemente eingebaut, bis Register und Wertebereiche an der realen Anlage geprüft sind.
-      - type: grid
-        columns: 2
-        square: false
-        cards:
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_kesseltemperatur
-            name: Kessel °C
-            min: 0
-            max: 100
-            severity:
-              green: 0
-              yellow: 65
-              red: 85
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_puffer_ladezustand
-            name: Puffer %
-            min: 0
-            max: 100
-            severity:
-              red: 0
-              yellow: 30
-              green: 60
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_pelletfuellstand
-            name: Pellets %
-            min: 0
-            max: 100
-            severity:
-              red: 0
-              yellow: 20
-              green: 50
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_aussentemperatur
-            name: Außen °C
-            min: -20
-            max: 45
-      - type: entities
-        title: Status
-        entities:
-          - sensor.froehling_pe1_froehling_pe1_anlagenzustand
-          - sensor.froehling_pe1_froehling_pe1_kesselzustand
-          - binary_sensor.froehling_pe1_froehling_pe1_hk1_pumpe
-          - sensor.froehling_pe1_froehling_pe1_pufferpumpe_ansteuerung
-          - sensor.froehling_pe1_froehling_pe1_stunden_bis_asche_entleeren
-          - sensor.froehling_pe1_froehling_pe1_stunden_seit_letzter_wartung
-      - type: history-graph
-        title: Temperaturen 24h
-        hours_to_show: 24
-        entities:
-          - sensor.froehling_pe1_froehling_pe1_kesseltemperatur
-          - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_oben
-          - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_mitte
-          - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_unten
-          - sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_ist
-          - sensor.froehling_pe1_froehling_pe1_aussentemperatur
-
-  - title: Kessel
-    path: kessel
-    icon: mdi:boiler
+      Die Heizkurven-/Betriebsart-Entities existieren, werden aber erst als Bedienelemente
+      eingebaut, wenn du Schreibzugriffe ausdrücklich freigibst und wir die Register/Wertebereiche
+      geprüft haben.'
+  - type: history-graph
+    title: HK1 Verlauf
+    hours_to_show: 24
+    entities:
+    - sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_ist
+    - sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_soll
+    - sensor.froehling_pe1_froehling_pe1_aussentemperatur
+- title: Puffer
+  path: puffer
+  icon: mdi:water-boiler
+  cards:
+  - type: picture-elements
+    image: /local/froeling/froeling_puffer01.svg
+    elements:
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_kesseltemperatur
+      tap_action:
+        action: more-info
+      style:
+        left: 9%
+        top: 53%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_pufferpumpe_ansteuerung
+      tap_action:
+        action: more-info
+      style:
+        left: 42%
+        top: 86%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_puffer_ladezustand
+      tap_action:
+        action: more-info
+      style:
+        left: 69%
+        top: 50%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_puffer_temperatur_oben
+      tap_action:
+        action: more-info
+      style:
+        left: 90%
+        top: 23%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_puffer_temperatur_unten
+      tap_action:
+        action: more-info
+      style:
+        left: 91%
+        top: 77%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_kesselzustand
+      tap_action:
+        action: more-info
+      style:
+        left: 13%
+        top: 80%
+        font-size: 0.8em
+        font-weight: '700'
+        color: '#fff'
+        background: rgba(30,30,30,.78)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    entity: sensor.froehling_pe1_froehling_pe1_puffer_ladezustand
+  - type: grid
+    columns: 2
+    square: false
     cards:
-      - type: grid
-        columns: 2
-        square: false
-        cards:
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_kesseltemperatur
-            name: Kesseltemperatur
-            min: 0
-            max: 100
-            severity:
-              green: 0
-              yellow: 65
-              red: 85
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_ruecklauftemperatur
-            name: Rücklauf
-            min: 0
-            max: 100
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_pelletfuellstand
-            name: Pelletfüllstand
-            min: 0
-            max: 100
-            severity:
-              red: 0
-              yellow: 20
-              green: 50
-      - type: entities
-        title: Kesselwerte
-        entities:
-          - sensor.froehling_pe1_froehling_pe1_anlagenzustand
-          - sensor.froehling_pe1_froehling_pe1_kesselzustand
-          - sensor.froehling_pe1_froehling_pe1_kesseltemperatur
-          - sensor.froehling_pe1_froehling_pe1_ruecklauftemperatur
-          - sensor.froehling_pe1_froehling_pe1_betriebsstunden
-          - sensor.froehling_pe1_froehling_pe1_stunden_seit_letzter_wartung
-          - sensor.froehling_pe1_froehling_pe1_stunden_bis_asche_entleeren
-          - sensor.froehling_pe1_froehling_pe1_pelletfuellstand
-          - sensor.froehling_pe1_froehling_pe1_pelletverbrauch_kg
-          - sensor.froehling_pe1_froehling_pe1_pelletverbrauch_gesamt
-      - type: history-graph
-        title: Kessel Verlauf
-        hours_to_show: 24
-        entities:
-          - sensor.froehling_pe1_froehling_pe1_kesseltemperatur
-          - sensor.froehling_pe1_froehling_pe1_ruecklauftemperatur
-          - sensor.froehling_pe1_froehling_pe1_pelletfuellstand
-
-  - title: Heizkreis 1
-    path: heizkreis-1
-    icon: mdi:radiator
+    - type: gauge
+      entity: sensor.froehling_pe1_froehling_pe1_puffer_ladezustand
+      name: Ladezustand
+      min: 0
+      max: 100
+      severity:
+        red: 0
+        yellow: 30
+        green: 60
+    - type: gauge
+      entity: sensor.froehling_pe1_froehling_pe1_puffer_temperatur_oben
+      name: Oben
+      min: 0
+      max: 100
+    - type: gauge
+      entity: sensor.froehling_pe1_froehling_pe1_puffer_temperatur_mitte
+      name: Mitte
+      min: 0
+      max: 140
+    - type: gauge
+      entity: sensor.froehling_pe1_froehling_pe1_puffer_temperatur_unten
+      name: Unten
+      min: 0
+      max: 100
+    - type: gauge
+      entity: sensor.froehling_pe1_froehling_pe1_pufferpumpe_ansteuerung
+      name: Pufferpumpe
+      min: 0
+      max: 100
+  - type: markdown
+    content: ⚠️ `Puffer Temperatur Mitte` war live bei 127,5 °C. Das SVG aus dem Referenzprojekt
+      nutzt für die Visualisierung nur Puffer oben/unten und Ladezustand. Bitte den
+      Mittelwert gegen das echte Fröling-Display prüfen.
+  - type: history-graph
+    title: Puffer Verlauf
+    hours_to_show: 24
+    entities:
+    - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_oben
+    - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_mitte
+    - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_unten
+    - sensor.froehling_pe1_froehling_pe1_puffer_ladezustand
+- title: Pellets & Austragung
+  path: pellets-austragung
+  icon: mdi:barley
+  cards:
+  - type: picture-elements
+    image: /local/froeling/froeling_austragung.svg
+    elements:
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_pelletfuellstand
+      tap_action:
+        action: more-info
+      style:
+        left: 62%
+        top: 72%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_pelletverbrauch_gesamt
+      tap_action:
+        action: more-info
+      style:
+        left: 66%
+        top: 37%
+        font-size: 0.95em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    - type: state-label
+      entity: sensor.froehling_pe1_froehling_pe1_pelletverbrauch_kg
+      tap_action:
+        action: more-info
+      style:
+        left: 66%
+        top: 48%
+        font-size: 0.85em
+        font-weight: '700'
+        color: '#101820'
+        background: rgba(255,255,255,.90)
+        border-radius: 999px
+        padding: 2px 8px
+        box-shadow: 0 1px 4px rgba(0,0,0,.28)
+        white-space: nowrap
+    entity: sensor.froehling_pe1_froehling_pe1_pelletfuellstand
+  - type: grid
+    columns: 2
+    square: false
     cards:
-      - type: grid
-        columns: 2
-        square: false
-        cards:
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_ist
-            name: Vorlauf Ist
-            min: 0
-            max: 80
-            severity:
-              green: 0
-              yellow: 45
-              red: 65
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_soll
-            name: Vorlauf Soll
-            min: 0
-            max: 80
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_aussentemperatur
-            name: Außentemperatur
-            min: -20
-            max: 45
-      - type: entities
-        title: Heizkreis 1
-        entities:
-          - binary_sensor.froehling_pe1_froehling_pe1_hk1_pumpe
-          - sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_ist
-          - sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_soll
-          - sensor.froehling_pe1_froehling_pe1_aussentemperatur
-      - type: markdown
-        content: |
-          ## Vorhandene Steuer-Entities, bewusst nicht eingebaut
+    - type: gauge
+      entity: sensor.froehling_pe1_froehling_pe1_pelletfuellstand
+      name: Pelletfüllstand
+      min: 0
+      max: 100
+      severity:
+        red: 0
+        yellow: 20
+        green: 50
+    - type: gauge
+      entity: sensor.froehling_pe1_froehling_pe1_stunden_bis_asche_entleeren
+      name: Asche entleeren in h
+      min: 0
+      max: 1000
+      severity:
+        red: 0
+        yellow: 100
+        green: 300
+  - type: entities
+    title: Pellets / Wartung
+    entities:
+    - sensor.froehling_pe1_froehling_pe1_pelletfuellstand
+    - sensor.froehling_pe1_froehling_pe1_pelletverbrauch_kg
+    - sensor.froehling_pe1_froehling_pe1_pelletverbrauch_gesamt
+    - sensor.froehling_pe1_froehling_pe1_betriebsstunden
+    - sensor.froehling_pe1_froehling_pe1_stunden_seit_letzter_wartung
+    - sensor.froehling_pe1_froehling_pe1_stunden_bis_asche_entleeren
+  - type: history-graph
+    title: Pelletfüllstand
+    hours_to_show: 168
+    entities:
+    - sensor.froehling_pe1_froehling_pe1_pelletfuellstand
+- title: Rohwerte
+  path: rohwerte
+  icon: mdi:database-eye
+  cards:
+  - type: markdown
+    content: '# Rohwerte
 
-          Diese Entities existieren live, bleiben aber außerhalb des Dashboards, bis du Schreibzugriffe ausdrücklich freigibst und die Wertebereiche geprüft sind:
 
-          - `select.froehling_pe1_froehling_pe1_hk1_betriebsart`
-          - `number.froehling_pe1_froehling_pe1_hk1_vorlauf_bei_minus_10c_aussentemperatur`
-          - `number.froehling_pe1_froehling_pe1_hk1_vorlauf_bei_plus_10c_aussentemperatur`
-          - `switch.froehling_pe1_froehling_pe1_esp_neustart`
-      - type: history-graph
-        title: HK1 Verlauf
-        hours_to_show: 24
-        entities:
-          - sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_ist
-          - sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_soll
-          - sensor.froehling_pe1_froehling_pe1_aussentemperatur
+      Live-Entity-IDs aus der offiziellen ESPHome-Integration. Schreibbare Controls
+      sind dokumentiert, aber nicht als Bedienoberfläche eingebaut.'
+  - type: entities
+    title: Alle Sensoren
+    entities:
+    - sensor.froehling_pe1_froehling_pe1_anlagenzustand
+    - sensor.froehling_pe1_froehling_pe1_kesselzustand
+    - sensor.froehling_pe1_froehling_pe1_aussentemperatur
+    - sensor.froehling_pe1_froehling_pe1_kesseltemperatur
+    - sensor.froehling_pe1_froehling_pe1_ruecklauftemperatur
+    - sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_ist
+    - sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_soll
+    - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_oben
+    - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_mitte
+    - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_unten
+    - sensor.froehling_pe1_froehling_pe1_puffer_ladezustand
+    - sensor.froehling_pe1_froehling_pe1_pufferpumpe_ansteuerung
+    - sensor.froehling_pe1_froehling_pe1_pelletfuellstand
+    - sensor.froehling_pe1_froehling_pe1_pelletverbrauch_kg
+    - sensor.froehling_pe1_froehling_pe1_pelletverbrauch_gesamt
+    - sensor.froehling_pe1_froehling_pe1_betriebsstunden
+    - sensor.froehling_pe1_froehling_pe1_stunden_seit_letzter_wartung
+    - sensor.froehling_pe1_froehling_pe1_stunden_bis_asche_entleeren
+    - binary_sensor.froehling_pe1_froehling_pe1_hk1_pumpe
+  - type: markdown
+    content: '## Nicht im Dashboard geschaltete Steuer-Entities
 
-  - title: Puffer
-    path: puffer
-    icon: mdi:water-boiler
-    cards:
-      - type: grid
-        columns: 2
-        square: false
-        cards:
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_puffer_ladezustand
-            name: Ladezustand
-            min: 0
-            max: 100
-            severity:
-              red: 0
-              yellow: 30
-              green: 60
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_puffer_temperatur_oben
-            name: Oben
-            min: 0
-            max: 100
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_puffer_temperatur_mitte
-            name: Mitte
-            min: 0
-            max: 140
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_puffer_temperatur_unten
-            name: Unten
-            min: 0
-            max: 100
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_pufferpumpe_ansteuerung
-            name: Pufferpumpe
-            min: 0
-            max: 100
-      - type: entities
-        title: Pufferwerte
-        entities:
-          - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_oben
-          - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_mitte
-          - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_unten
-          - sensor.froehling_pe1_froehling_pe1_puffer_ladezustand
-          - sensor.froehling_pe1_froehling_pe1_pufferpumpe_ansteuerung
-      - type: history-graph
-        title: Puffer Verlauf
-        hours_to_show: 24
-        entities:
-          - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_oben
-          - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_mitte
-          - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_unten
-          - sensor.froehling_pe1_froehling_pe1_puffer_ladezustand
 
-  - title: Pellets & Wartung
-    path: pellets-wartung
-    icon: mdi:barley
-    cards:
-      - type: grid
-        columns: 2
-        square: false
-        cards:
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_pelletfuellstand
-            name: Pelletfüllstand
-            min: 0
-            max: 100
-            severity:
-              red: 0
-              yellow: 20
-              green: 50
-          - type: gauge
-            entity: sensor.froehling_pe1_froehling_pe1_stunden_bis_asche_entleeren
-            name: Asche entleeren in h
-            min: 0
-            max: 1000
-            severity:
-              red: 0
-              yellow: 100
-              green: 300
-      - type: entities
-        title: Pellets / Wartung
-        entities:
-          - sensor.froehling_pe1_froehling_pe1_pelletfuellstand
-          - sensor.froehling_pe1_froehling_pe1_pelletverbrauch_kg
-          - sensor.froehling_pe1_froehling_pe1_pelletverbrauch_gesamt
-          - sensor.froehling_pe1_froehling_pe1_betriebsstunden
-          - sensor.froehling_pe1_froehling_pe1_stunden_seit_letzter_wartung
-          - sensor.froehling_pe1_froehling_pe1_stunden_bis_asche_entleeren
-      - type: history-graph
-        title: Pelletfüllstand
-        hours_to_show: 168
-        entities:
-          - sensor.froehling_pe1_froehling_pe1_pelletfuellstand
+      - `select.froehling_pe1_froehling_pe1_hk1_betriebsart`
 
-  - title: Rohwerte
-    path: rohwerte
-    icon: mdi:database-eye
-    cards:
-      - type: markdown
-        content: |
-          # Rohwerte
+      - `number.froehling_pe1_froehling_pe1_hk1_vorlauf_bei_minus_10c_aussentemperatur`
 
-          Live-Entity-IDs aus der offiziellen ESPHome-Integration.
+      - `number.froehling_pe1_froehling_pe1_hk1_vorlauf_bei_plus_10c_aussentemperatur`
 
-          Writable Controls sind dokumentiert, aber nicht Bestandteil der Bedienoberfläche.
-      - type: entities
-        title: Alle Sensoren
-        entities:
-          - sensor.froehling_pe1_froehling_pe1_anlagenzustand
-          - sensor.froehling_pe1_froehling_pe1_kesselzustand
-          - sensor.froehling_pe1_froehling_pe1_aussentemperatur
-          - sensor.froehling_pe1_froehling_pe1_kesseltemperatur
-          - sensor.froehling_pe1_froehling_pe1_ruecklauftemperatur
-          - sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_ist
-          - sensor.froehling_pe1_froehling_pe1_hk1_vorlauf_soll
-          - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_oben
-          - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_mitte
-          - sensor.froehling_pe1_froehling_pe1_puffer_temperatur_unten
-          - sensor.froehling_pe1_froehling_pe1_puffer_ladezustand
-          - sensor.froehling_pe1_froehling_pe1_pufferpumpe_ansteuerung
-          - sensor.froehling_pe1_froehling_pe1_pelletfuellstand
-          - sensor.froehling_pe1_froehling_pe1_pelletverbrauch_kg
-          - sensor.froehling_pe1_froehling_pe1_pelletverbrauch_gesamt
-          - sensor.froehling_pe1_froehling_pe1_betriebsstunden
-          - sensor.froehling_pe1_froehling_pe1_stunden_seit_letzter_wartung
-          - sensor.froehling_pe1_froehling_pe1_stunden_bis_asche_entleeren
-          - binary_sensor.froehling_pe1_froehling_pe1_hk1_pumpe
-      - type: markdown
-        content: |
-          ## Nicht im Dashboard geschaltete Steuer-Entities
-
-          - `select.froehling_pe1_froehling_pe1_hk1_betriebsart`
-          - `number.froehling_pe1_froehling_pe1_hk1_vorlauf_bei_minus_10c_aussentemperatur`
-          - `number.froehling_pe1_froehling_pe1_hk1_vorlauf_bei_plus_10c_aussentemperatur`
-          - `switch.froehling_pe1_froehling_pe1_esp_neustart`
+      - `switch.froehling_pe1_froehling_pe1_esp_neustart`'

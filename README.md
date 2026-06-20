@@ -147,9 +147,10 @@ Die Integration liest `http://192.168.178.192/events` lokal aus und legt die Fr�
 
 Dieses Repository enthält Lovelace-Dashboard-Vorlagen ohne HACS-Abhängigkeiten:
 
-Deutsch, auf Roys live verifizierte ESPHome-Entity-IDs angepasst:
+Deutsch, auf Roys live verifizierte ESPHome-Entity-IDs angepasst und mit SVG-Visualisierung aus `GyroGearl00se/ESPHome-Froeling-Lambdatronic_3200`:
 
 - `homeassistant/de/dashboard.yaml`
+- Medien: `homeassistant/de/www/froeling/`
 
 English, generischer Startpunkt:
 
